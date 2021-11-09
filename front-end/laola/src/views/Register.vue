@@ -2,9 +2,9 @@
   <img src="../assets/logo.png" alt="logo la-ola" />
   <h1>C'est parti !</h1>
   <h3>Créer un compte</h3>
-  <button>Club</button>
-  <button>Particulier</button>
-  <form id="club">
+  <button @click="setRegistrationScheme('club')">Club</button>
+  <button @click="setRegistrationScheme('individual')">Particulier</button>
+  <form id="club" v-if="registrationScheme === 'club'">
     <input type="text" id="" placeholder="Nom du club" />
     <input type="text" id="" placeholder="Nom du représentant" />
     <input type="email" id="" placeholder="Email" />
@@ -14,7 +14,7 @@
       <button id="connexion">Connexion</button>
     </div>
   </form>
-  <form id="particulier">
+  <form id="particulier" v-if="registrationScheme === 'individual'">
     <input type="text" id="" placeholder="Nom" />
     <input type="email" id="" placeholder="Email" />
     <input type="password" id="" placeholder="Mot de passe" />
@@ -32,5 +32,16 @@
 export default {
   name: "Register",
   components: {},
+  data() {
+    return {
+      registrationScheme: "",
+    };
+  },
+  // apparition formulaire en data propertie/v-if
+  methods: {
+    setRegistrationScheme(type) {
+      this.registrationScheme = type;
+    },
+  },
 };
 </script>
