@@ -2,7 +2,10 @@
   <img src="../assets/logo.png" alt="logo la-ola" />
   <h1>Bienvenue sur la Ola</h1>
   <h3>Connectez-vous</h3>
-  <form id="">
+
+  <!---------------------------------------Formulaire Login------------------------------>
+
+  <form id="" @submit.prevent="handleSubmit">
     <input
       type="email"
       id="email"
@@ -10,7 +13,13 @@
       v-model="emailLogin"
       required
     />
-    <input type="password" id="password" placeholder="Password" required />
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+      v-model="passwordLogin"
+      required
+    />
     <div id="">
       <button id="">Connectez-vous</button>
     </div>
@@ -33,8 +42,33 @@ export default {
   data() {
     return {
       emailLogin: "",
-      inputPassword: "",
+      passwordLogin: "",
     };
   },
+
+  //   ----------------------------------Envoi Formulaire Login avec validation Token-----------
+
+  //   methods: {
+  //     handleSubmit: async function (e) {
+  //       e.preventDefault();
+  //       const body = {
+  //         emailLogin: this.emailLogin,
+  //         passwordLogin: this.passwordLogin,
+  //       };
+
+  //       const response = await axios
+  //         .post("https://dw-s1-marseille.osc-fr1.scalingo.io/login", body)
+  //         .catch((err) => console.log(err));
+
+  //       if (response && response.data.success) {
+  //         sessionStorage.setItem("logintoken", response.data.token);
+  //         const redirect_url = "/";
+  //         this.$router.push(redirect_url);
+  //       } else {
+  //         alert("Mot de passe / email incorrect(s) ou vous n'etes pas inscrit");
+  //         this.inputPassword = "";
+  //       }
+  //     },
+  //   },
 };
 </script>
