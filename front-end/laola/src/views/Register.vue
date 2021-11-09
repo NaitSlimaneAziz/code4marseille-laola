@@ -140,7 +140,10 @@ export default {
           confirmePassClub: this.confirmePassClub,
         };
         console.log(body);
-        const response = await axios.post("", body);
+        const response = await axios.post(
+          "https://localhost:8000/club/new",
+          body
+        );
         if (response.data === "Success") {
           const redirect_url = "/";
           this.$router.push(redirect_url);
