@@ -54,7 +54,7 @@ export default {
         };
         console.log("requête envoie");
         const response = await axios.post("", body);
-        if (response.data.success) {
+        if (response.data === "Success") {
           const redirect_url = "/compte";
           this.$router.push(redirect_url);
         }
