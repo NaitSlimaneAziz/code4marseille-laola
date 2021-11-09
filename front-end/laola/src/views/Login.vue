@@ -57,7 +57,7 @@ export default {
   //       };
 
   //       const response = await axios
-  //         .post("https://dw-s1-marseille.osc-fr1.scalingo.io/login", body)
+  //         .post("", body)
   //         .catch((err) => console.log(err));
 
   //       if (response && response.data.success) {
