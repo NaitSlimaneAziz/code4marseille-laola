@@ -163,6 +163,9 @@ export default {
         }
       }
     },
+    myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    },
   },
 };
 </script>

@@ -15,7 +15,8 @@
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -33,5 +34,22 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+input {
+  border: #ebf0ff solid 2px;
+  border-radius: 8px;
+}
+placeholder {
+  font-size: 20 px;
+  color: #9098b1;
+}
+a {
+  color: #40bfff;
+}
+button {
+  background-color: #40bfff;
+  color: white;
+  border: none;
+  border-radius: 8px;
 }
 </style>

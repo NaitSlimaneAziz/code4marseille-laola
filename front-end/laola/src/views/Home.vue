@@ -1,12 +1,20 @@
 <template>
   <div class="home">
     <nav>
-      <i class="fas fa-home"></i>
-      <p>Catégorie</p>
-      <i class="far fa-user"></i>
-      <p>Mon compte</p>
-      <i class="fas fa-shopping-cart"></i>
-      <p>Panier</p>
+      <div>
+        <i class="fas fa-home"></i>
+        <Category />
+      </div>
+      <div>
+        <a href="/login"
+          ><i class="far fa-user"></i>
+          <p>Mon compte</p></a
+        >
+      </div>
+      <div>
+        <i class="fas fa-shopping-cart"></i>
+        <p>Panier</p>
+      </div>
     </nav>
 
     <div>
@@ -15,7 +23,7 @@
           name="q"
           type="text"
           size="15"
-          placeholder="Entrer votre recherche..."
+          placeholder="Entrez votre recherche..."
         />
         <input id="button-submit" type="submit" value=" " />
       </form>
@@ -41,11 +49,13 @@
 
 <script>
 import Card from "@/components/Card.vue";
+import Category from "@/components/Category.vue";
 
 export default {
   name: "Home",
   components: {
     Card,
+    Category,
   },
   data() {
     return {
