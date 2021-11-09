@@ -51,14 +51,29 @@ export default {
     return {
       cardsArray: [
         {
-          title: "AIR MAX 90",
+          title: "NIKE AIR MAX 270",
           price: 50.0,
           points: 20,
-          image: "/assets/article.jpg",
+          image: "/assets/article1.jpg",
         },
-        { title: "AIR MAX 90", price: 50.0, points: 20 },
-        { title: "AIR MAX 90", price: 50.0, points: 20 },
-        { title: "AIR MAX 90", price: 50.0, points: 20 },
+        {
+          title: "NIKE AIR MAX 90",
+          price: 60.0,
+          points: 25,
+          image: "/assets/article2.jpg",
+        },
+        {
+          title: "NIKE AIR force",
+          price: 40.0,
+          points: 15,
+          image: "/assets/article3.jpg",
+        },
+        {
+          title: "NIKE AIR MAX 95 ",
+          price: 55.0,
+          points: 22,
+          image: "/assets/article4.jpg",
+        },
       ],
     };
   },
