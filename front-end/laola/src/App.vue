@@ -60,6 +60,6 @@ button {
   margin-bottom: 15px;
 }
 .logo {
-  margin-top: 35%;
+  margin-top: 20%;
 }
 </style>

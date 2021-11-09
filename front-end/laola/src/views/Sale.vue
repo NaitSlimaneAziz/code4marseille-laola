@@ -1,15 +1,17 @@
 <template>
-  <form @submit.prevent action="/action_page.php">
-    <input type="file" id="myFile" name="filename" />
-    <input type="text" placeholder="Titre de l'article" />
-    <input type="text" placeholder="Description de l'article" />
-    <Category />
-    <input type="text" placeholder="Categorie" />
-    <input type="text" placeholder="Marque" />
-    <input type="text" placeholder="Etat" />
-    <input type="text" placeholder="Prix" />
-    <button>Ajouter</button>
-  </form>
+  <div id="block">
+    <form @submit.prevent action="/action_page.php">
+      <input type="file" id="myFile" name="filename" />
+      <input type="text" placeholder="Titre de l'article" />
+      <input type="text" placeholder="Description de l'article" />
+      <Category />
+      <input type="text" placeholder="Categorie" />
+      <input type="text" placeholder="Marque" />
+      <input type="text" placeholder="Etat" />
+      <input type="text" placeholder="Prix" />
+      <button>Ajouter</button>
+    </form>
+  </div>
 </template>
 <script>
 import Category from "../components/Category.vue";
@@ -26,6 +28,11 @@ export default {
 </script>
 
 <style>
+#block {
+  width: 40vw;
+  margin-left: 360px;
+  margin-right: 360px;
+}
 #myInput:focus {
   outline: 3px solid #ddd;
 }

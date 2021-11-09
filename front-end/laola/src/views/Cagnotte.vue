@@ -1,31 +1,33 @@
 <template>
-  <a href="./Profile.vue">icone</a>
-  <p>Ma Cagnotte "Don"</p>
-  <p>Je choisis de reverser :</p>
+  <div id="block">
+    <a href="./Profile.vue">icone</a>
+    <p>Ma Cagnotte "Don"</p>
+    <p>Je choisis de reverser :</p>
 
-  <!----------------------------- Formulaire de Don -------------------------->
+    <!----------------------------- Formulaire de Don -------------------------->
 
-  <form @submit.prevent="EnvoiDon()">
-    <input type="number" placeholder="15€" id="" v-model="prixDon" />
+    <form @submit.prevent="EnvoiDon()">
+      <input type="number" placeholder="15€" id="" v-model="prixDon" />
 
-    <p>Au Club :</p>
+      <p>Au Club :</p>
 
-    <input
-      type="text"
-      placeholder="Olympique de Marseille"
-      id=""
-      v-model="nomDuClub"
-    />
-    <p>
-      Ou trouvez un club pres de chez toi avec notre
-      <a href="http://monclubpresdechezmoi.com/">partenaire</a>
-    </p>
+      <input
+        type="text"
+        placeholder="Olympique de Marseille"
+        id=""
+        v-model="nomDuClub"
+      />
+      <p>
+        Ou trouvez un club pres de chez toi avec notre
+        <a href="http://monclubpresdechezmoi.com/">partenaire</a>
+      </p>
 
-    <input type="checkbox" v-model="donAnonyme" />
-    <p>Don Anonyme</p>
+      <input type="checkbox" v-model="donAnonyme" />
+      <p>Don Anonyme</p>
 
-    <button>Faire un Don</button>
-  </form>
+      <button>Faire un Don</button>
+    </form>
+  </div>
 </template>
 
 <script>

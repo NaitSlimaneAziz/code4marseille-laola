@@ -1,48 +1,50 @@
 <template>
-  <div class="home">
-    <nav>
-      <div>
-        <i class="fas fa-home"></i>
-        <Category />
-      </div>
-      <div>
-        <a href="/login"
-          ><i class="far fa-user"></i>
-          <p>Mon compte</p></a
-        >
-      </div>
-      <div>
-        <i class="fas fa-shopping-cart"></i>
-        <p>Panier</p>
-      </div>
-    </nav>
+  <div id="block">
+    <div class="home">
+      <nav>
+        <div>
+          <i class="fas fa-home"></i>
+          <Category />
+        </div>
+        <div>
+          <a href="/login"
+            ><i class="far fa-user"></i>
+            <p>Mon compte</p></a
+          >
+        </div>
+        <div>
+          <i class="fas fa-shopping-cart"></i>
+          <p>Panier</p>
+        </div>
+      </nav>
 
-    <div>
-      <form id="searchbox" method="get" action="/search" autocomplete="off">
-        <input
-          name="q"
-          type="text"
-          size="15"
-          placeholder="Entrez votre recherche..."
-        />
-        <input id="button-submit" type="submit" value=" " />
-      </form>
+      <div>
+        <form id="searchbox" method="get" action="/search" autocomplete="off">
+          <input
+            name="q"
+            type="text"
+            size="15"
+            placeholder="Entrez votre recherche..."
+          />
+          <input id="button-submit" type="submit" value=" " />
+        </form>
 
-      <i class="fas fa-sort-amount-down"></i>
-      <i class="fas fa-filter"></i>
+        <i class="fas fa-sort-amount-down"></i>
+        <i class="fas fa-filter"></i>
+      </div>
+
+      <img alt="Vue logo" src="../assets/chaussuresAccueil.jpg" />
     </div>
 
-    <img alt="Vue logo" src="../assets/chaussuresAccueil.jpg" />
-  </div>
+    <div>
+      <h3>Les meilleures ventes</h3>
+      <a href=".//">Voir plus</a>
+    </div>
 
-  <div>
-    <h3>Les meilleures ventes</h3>
-    <a href=".//">Voir plus</a>
-  </div>
-
-  <div class="cardWrapper">
-    <div :key="key" v-for="(el, key) in cardsArray">
-      <Card :data="el" />
+    <div class="cardWrapper">
+      <div :key="key" v-for="(el, key) in cardsArray">
+        <Card :data="el" />
+      </div>
     </div>
   </div>
 </template>

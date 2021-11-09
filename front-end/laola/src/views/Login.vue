@@ -1,39 +1,41 @@
 <template>
-  <img class="logo" src="../assets/logo.png" alt="logo la-ola" />
+  <div id="block">
+    <img class="logo" src="../assets/logo.png" alt="logo la-ola" />
 
-  <h1>Bienvenue sur la Ola !</h1>
-  <h3>Connectez-vous</h3>
+    <h1>Bienvenue sur la Ola !</h1>
+    <h3>Connectez-vous</h3>
 
-  <!---------------------------------------Formulaire Login------------------------------>
+    <!---------------------------------------Formulaire Login------------------------------>
 
-  <form id="" @submit.prevent="handleSubmit">
-    <input
-      type="email"
-      id="email"
-      placeholder="Email"
-      v-model="emailLogin"
-      required
-    /><br />
-    <input
-      type="password"
-      id="password"
-      placeholder="Password"
-      v-model="passwordLogin"
-      required
-    />
-    <div id="">
-      <button id="">Connectez-vous</button>
+    <form id="" @submit.prevent="handleSubmit">
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+        v-model="emailLogin"
+        required
+      /><br />
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        v-model="passwordLogin"
+        required
+      />
+      <div id="">
+        <button id="">Connectez-vous</button>
+      </div>
+    </form>
+    <div>
+      <a href="">Mot de passe oublié ?</a>
+      <p>
+        Vous n'êtes pas inscrit ?
+        <a href="./register">Inscrivez-vous</a>
+      </p>
     </div>
-  </form>
-  <div>
-    <a href="">Mot de passe oublié ?</a>
-    <p>
-      Vous n'êtes pas inscrit ?
-      <a href="./register">Inscrivez-vous</a>
-    </p>
-  </div>
-  <div>
-    <a href="/">Retour à l'accueil</a>
+    <div>
+      <a href="/">Retour à l'accueil</a>
+    </div>
   </div>
 </template>
 <script>
