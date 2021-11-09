@@ -124,7 +124,7 @@ export default {
     CreateClubAcount: async function () {
       if (this.motDePasseClub !== this.confirmePassClub) {
         console.log("create ok");
-        alert("veuillez saisir un mot de passe identique");
+        alert("veuillez saisir un mot de passe");
       } else {
         const body = {
           nomDuClub: this.nomDuClub,
@@ -135,7 +135,7 @@ export default {
         };
         console.log(body);
         const response = await axios.post("", body);
-        if (response.data.success) {
+        if (response.data === "Success") {
           const redirect_url = "/";
           this.$router.push(redirect_url);
         }
@@ -160,7 +160,7 @@ export default {
           "https://localhost:8000/user/new",
           body
         );
-        if (response.data.success) {
+        if (response.data === "Success") {
           const redirect_url = "/";
           this.$router.push(redirect_url);
         }
