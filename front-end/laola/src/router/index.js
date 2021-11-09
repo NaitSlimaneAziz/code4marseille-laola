@@ -5,6 +5,7 @@ import Register from "../views/Register.vue";
 import Compte from "../views/Compte.vue";
 import Cagnotte from "../views/Cagnotte.vue";
 import Contribution from "../views/Contribution.vue";
+import Sale from "../views/Sale.vue";
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: "/contribution",
     name: "Contribution",
     component: Contribution,
+  },
+  {
+    path: "/sale",
+    name: "Sale",
+    component: Sale,
   },
 ];
 
