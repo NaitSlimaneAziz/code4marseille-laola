@@ -4,22 +4,86 @@
   <h3>Créer un compte</h3>
   <button @click="setRegistrationScheme('club')">Club</button>
   <button @click="setRegistrationScheme('individual')">Particulier</button>
-  <form id="club" v-if="registrationScheme === 'club'">
-    <input type="text" id="" placeholder="Nom du club" />
-    <input type="text" id="" placeholder="Nom du représentant" />
-    <input type="email" id="" placeholder="Email" />
-    <input type="password" id="" placeholder="Mot de passe" />
-    <input type="password" id="" placeholder="Confirmation du mot de passe" />
+
+  <!--------------------------- formulaire Club ------------------------------>
+
+  <form
+    id="club"
+    v-if="registrationScheme === 'club'"
+    @submit.prevent="CreateClubAcount()"
+  >
+    <input
+      type="text"
+      id="nameClub"
+      placeholder="Nom du club"
+      v-model="nomDuClub"
+    />
+    <input
+      type="text"
+      id="namerepresentant"
+      placeholder="Nom du représentant"
+      v-model="nomDuRepresentant"
+    />
+    <input
+      type="email"
+      id="emailClub"
+      placeholder="Email"
+      v-model="emailClub"
+    />
+    <input
+      type="password"
+      id="passwordClub"
+      placeholder="Mot de passe"
+      v-model="motDePasseClub"
+    />
+    <input
+      type="password"
+      id="confirmePassClub"
+      placeholder="Confirmation du mot de passe"
+      v-model="confirmePassClub"
+    />
     <div id="button">
       <button id="connexion">Connexion</button>
     </div>
   </form>
-  <form id="particulier" v-if="registrationScheme === 'individual'">
-    <input type="text" id="" placeholder="Nom" />
-    <input type="email" id="" placeholder="Email" />
-    <input type="password" id="" placeholder="Mot de passe" />
-    <input type="password" id="" placeholder="Confirmation du mot de passe" />
-    <input type="text" id="" placeholder="Code de parrainage" />
+
+  <!---------------------------- formulaire particulier --------------------->
+
+  <form
+    id="particulier"
+    v-if="registrationScheme === 'individual'"
+    @submit.prevent="CreateParticulierAcount()"
+  >
+    <input
+      type="text"
+      id="nomParticulier"
+      placeholder="Nom"
+      v-model="nomParticulier"
+    />
+    <input
+      type="email"
+      id="emailParticulier"
+      placeholder="Email"
+      v-model="emailParticulier"
+    />
+    <input
+      type="password"
+      id="passParticulier"
+      placeholder="Mot de passe"
+      v-model="passParticulier"
+    />
+    <input
+      type="password"
+      id="confirmePassParticulier"
+      placeholder="Confirmation du mot de passe"
+      v-model="confirmePassParticulier"
+    />
+    <input
+      type="text"
+      id="codeParrainage"
+      placeholder="Code de parrainage"
+      v-model="codeParrainage"
+    />
     <div id="button">
       <button id="connexion">Connexion</button>
     </div>
@@ -28,19 +92,76 @@
     <a href="./Home">Retour à l'acceuil</a>
   </div>
 </template>
+
 <script>
+import axios from "axios";
+
 export default {
   name: "Register",
   components: {},
-  data() {
+  data: function () {
     return {
       registrationScheme: "",
+      nomDuClub: "",
+      nomDuRepresentant: "",
+      emailClub: "",
+      motDePasseClub: "",
+      confirmePassClub: "",
+      nomParticulier: "",
+      emailParticulier: "",
+      passParticulier: "",
+      confirmePassParticulier: "",
+      codeParrainage: "",
     };
   },
-  // apparition formulaire en data propertie/v-if
+  //--------------------------apparition formulaire en data propertie/v-if--------------
   methods: {
     setRegistrationScheme(type) {
       this.registrationScheme = type;
+    },
+    //------------------------envoi validation formulaire Club------------------------
+
+    CreateClubAcount: async function () {
+      if (this.motDePasseClub !== this.confirmePassClub) {
+        console.log("create ok");
+        alert("veuillez saisir un mot de passe identique");
+      } else {
+        const body = {
+          nomDuClub: this.nomDuClub,
+          nomDuRepresentant: this.nomDuRepresentant,
+          emailClub: this.emailClub,
+          motDePasseClub: this.motDePasseClub,
+          confirmePassClub: this.confirmePassClub,
+        };
+        console.log(body);
+        const response = await axios.post("", body);
+        if (response.data.success) {
+          const redirect_url = "/";
+          this.$router.push(redirect_url);
+        }
+      }
+    },
+    // -----------------------envoi validation formulaire Particulier---------------
+
+    CreateParticulierAcount: async function () {
+      if (this.passParticulier !== this.confirmePassParticulier) {
+        console.log("create ok");
+        alert("veuillez saisir un mot de passe identique");
+      } else {
+        const body = {
+          nomParticulier: this.nomParticulier,
+          emailParticulier: this.emailParticulier,
+          passParticulier: this.passParticulier,
+          confirmePassParticulier: this.confirmePassParticulier,
+          codeParrainage: this.codeParrainage,
+        };
+        console.log("create ok");
+        const response = await axios.post("", body);
+        if (response.data.success) {
+          const redirect_url = "/";
+          this.$router.push(redirect_url);
+        }
+      }
     },
   },
 };

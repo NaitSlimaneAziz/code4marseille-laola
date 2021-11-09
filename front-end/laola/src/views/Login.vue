@@ -13,8 +13,11 @@
     <a href="">Mot de passe oublié ?</a>
     <p>
       Vous n'êtes pas inscrit ?
-      <a href="./inscription.vue">Inscrivez-vous</a>
+      <a href="./register">Inscrivez-vous</a>
     </p>
+  </div>
+  <div>
+    <a href="./Home">Retour à l'acceuil</a>
   </div>
 </template>
 <script>
