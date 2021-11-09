@@ -89,7 +89,7 @@
     </div>
   </form>
   <div>
-    <a href="./Home">Retour à l'acceuil</a>
+    <a href="/">Retour à l'acceuil</a>
   </div>
 </template>
 
