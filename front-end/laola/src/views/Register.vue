@@ -160,7 +160,7 @@ export default {
           "https://localhost:8000/user/new",
           body
         );
-        if (response.data.success) {
+        if (response.data == "Success") {
           const redirect_url = "/";
           this.$router.push(redirect_url);
         }
