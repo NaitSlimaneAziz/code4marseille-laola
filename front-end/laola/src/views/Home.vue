@@ -137,4 +137,9 @@ input:focus::-moz-placeholder {
   width: 43px;
   height: 45px;
 }
+
+.cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>

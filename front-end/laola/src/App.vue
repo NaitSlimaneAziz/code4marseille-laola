@@ -38,6 +38,9 @@
 input {
   border: #ebf0ff solid 2px;
   border-radius: 8px;
+  height: 40px;
+  width: 95%;
+  margin-bottom: 15px;
 }
 placeholder {
   font-size: 20 px;
@@ -45,11 +48,18 @@ placeholder {
 }
 a {
   color: #40bfff;
+  font-weight: bold;
 }
 button {
   background-color: #40bfff;
   color: white;
   border: none;
   border-radius: 8px;
+  height: 40px;
+  width: 95%;
+  margin-bottom: 15px;
+}
+.logo {
+  margin-top: 35%;
 }
 </style>

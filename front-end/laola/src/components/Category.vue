@@ -38,4 +38,7 @@ button {
   border: none;
   background-color: none;
 }
+a {
+  color: grey;
+}
 </style>

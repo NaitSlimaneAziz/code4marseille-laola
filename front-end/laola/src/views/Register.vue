@@ -1,9 +1,15 @@
 <template>
-  <img src="../assets/logo.png" alt="logo la-ola" />
+  <img class="logo" src="../assets/logo.png" alt="logo la-ola" />
   <h1>C'est parti !</h1>
   <h3>Créer un compte</h3>
-  <button @click="setRegistrationScheme('club')">Club</button>
-  <button @click="setRegistrationScheme('individual')">Particulier</button>
+  <div class="row">
+    <button class="nudeButton" @click="setRegistrationScheme('club')">
+      Club
+    </button>
+    <button class="nudeButton" @click="setRegistrationScheme('individual')">
+      Particulier
+    </button>
+  </div>
 
   <!--------------------------- formulaire Club ------------------------------>
 
@@ -89,7 +95,7 @@
     </div>
   </form>
   <div>
-    <a href="/">Retour à l'acceuil</a>
+    <a href="/">Retour à l'accueil</a>
   </div>
 </template>
 
@@ -162,7 +168,6 @@ export default {
         );
 
         if (response.data === "Success") {
-
           const redirect_url = "/";
           this.$router.push(redirect_url);
         }
@@ -174,3 +179,20 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+h3 {
+  font-weight: 100;
+}
+.row {
+  display: flex;
+  flex: 2;
+}
+.nudeButton {
+  background-color: white;
+  border: 3px solid #40bfff;
+  color: #40bfff;
+  font-weight: bold;
+  margin: 5px;
+}
+</style>

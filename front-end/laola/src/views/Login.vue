@@ -1,6 +1,7 @@
 <template>
-  <img src="../assets/logo.png" alt="logo la-ola" />
-  <h1>Bienvenue sur la Ola</h1>
+  <img class="logo" src="../assets/logo.png" alt="logo la-ola" />
+
+  <h1>Bienvenue sur la Ola !</h1>
   <h3>Connectez-vous</h3>
 
   <!---------------------------------------Formulaire Login------------------------------>
@@ -12,7 +13,7 @@
       placeholder="Email"
       v-model="emailLogin"
       required
-    />
+    /><br />
     <input
       type="password"
       id="password"
@@ -32,7 +33,7 @@
     </p>
   </div>
   <div>
-    <a href="/">Retour à l'acceuil</a>
+    <a href="/">Retour à l'accueil</a>
   </div>
 </template>
 <script>
@@ -72,3 +73,9 @@ export default {
   //   },
 };
 </script>
+
+<style scoped>
+h3 {
+  font-weight: 100;
+}
+</style>
