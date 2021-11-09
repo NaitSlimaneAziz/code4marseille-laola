@@ -1,11 +1,14 @@
 <template>
   <div id="block">
+    <img class="logo" src="../assets/logo.png" alt="logo la-ola" />
+    <h1>Mets en vente ton article...</h1>
+    <h3>Go !</h3>
     <form @submit.prevent action="/action_page.php">
       <input type="file" id="myFile" name="filename" />
       <input type="text" placeholder="Titre de l'article" />
       <input type="text" placeholder="Description de l'article" />
-      <Category />
-      <input type="text" placeholder="Categorie" />
+
+      <input class="reduce" type="text" placeholder="Categorie" /> <Category />
       <input type="text" placeholder="Marque" />
       <input type="text" placeholder="Etat" />
       <input type="text" placeholder="Prix" />
@@ -65,5 +68,11 @@ export default {
 
 .show {
   display: block;
+}
+h3 {
+  font-weight: 100;
+}
+.reduce {
+  width: 90%;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div class="dropdown">
-    <button @click="myFunction()" class="dropbtn">Catégorie</button>
+    <button @click="myFunction()" class="dropbtn">
+      <i class="fas fa-sort-down"></i>
+    </button>
     <div id="myDropdown" class="dropdown-content">
       <!-- <input
         type="text"
@@ -37,6 +39,8 @@ export default {
 button {
   border: none;
   background-color: none;
+  height: 15px;
+  margin-bottom: 0;
 }
 a {
   color: grey;

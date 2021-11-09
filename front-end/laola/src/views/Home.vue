@@ -3,40 +3,36 @@
     <div class="home">
       <nav>
         <div>
-          <i class="fas fa-home"></i>
           <Category />
+          <p>Catégories</p>
         </div>
         <div>
-          <a href="/login"
-            ><i class="far fa-user"></i>
-            <p>Mon compte</p></a
-          >
+          <a href="/sale"><i class="fas fa-plus-square"></i></a>
+          <p>Vente</p>
         </div>
         <div>
-          <i class="fas fa-shopping-cart"></i>
+          <a href="/login"><i class="fas fa-user"></i></a>
+          <p>Mon compte</p>
+        </div>
+        <div>
+          <a href="/panier"><i class="fas fa-shopping-basket"></i></a>
           <p>Panier</p>
         </div>
       </nav>
 
-      <div>
-        <form id="searchbox" method="get" action="/search" autocomplete="off">
-          <input
-            name="q"
-            type="text"
-            size="15"
-            placeholder="Entrez votre recherche..."
-          />
-          <input id="button-submit" type="submit" value=" " />
-        </form>
-
-        <i class="fas fa-sort-amount-down"></i>
-        <i class="fas fa-filter"></i>
-      </div>
+      <form id="searchbox" method="get" action="/search" autocomplete="off">
+        <input
+          name="q"
+          type="text"
+          size="15"
+          placeholder="Entrez votre recherche..."
+        />
+      </form>
 
       <img alt="Vue logo" src="../assets/chaussuresAccueil.jpg" />
     </div>
 
-    <div>
+    <div class="row">
       <h3>Les meilleures ventes</h3>
       <a href=".//">Voir plus</a>
     </div>
@@ -112,12 +108,12 @@ input:focus::-moz-placeholder {
     no-repeat 10px 13px #f2f2f2;
   border: 2px solid #f2f2f2;
   font: bold 12px Arial, Helvetica, Sans-serif;
-  color: #6a6f75;
-  width: 160px;
+  color: #40bfff;
+  width: 37.6vw;
   padding: 14px 17px 12px 30px;
-  -webkit-border-radius: 5px 0px 0px 5px;
-  -moz-border-radius: 5px 0px 0px 5px;
-  border-radius: 5px 0px 0px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
   text-shadow: 0 2px 3px #fff;
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
@@ -128,20 +124,27 @@ input:focus::-moz-placeholder {
   background: #f7f7f7;
   border: 2px solid #f7f7f7;
   width: 200px;
-  padding-left: 10px;
-}
-
-#button-submit {
-  background: url(http://4.bp.blogspot.com/-slkXXLUcxqg/VEQI-sJKfZI/AAAAAAAAAlA/9UtEyStfDHw/s1600/slider-arrow-right.png)
-    no-repeat;
-  margin-left: -40px;
-  border-width: 0px;
-  width: 43px;
-  height: 45px;
 }
 
 .cardWrapper {
   display: flex;
-  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10%;
+}
+
+p {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 </style>

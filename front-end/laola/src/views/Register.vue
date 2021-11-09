@@ -1,103 +1,101 @@
 <template>
-  <div id="block">
-    <img class="logo" src="../assets/logo.png" alt="logo la-ola" />
-    <h1>C'est parti !</h1>
-    <h3>Créer un compte</h3>
-    <div class="row">
-      <button class="nudeButton" @click="setRegistrationScheme('club')">
-        Club
-      </button>
-      <button class="nudeButton" @click="setRegistrationScheme('individual')">
-        Particulier
-      </button>
+  <img class="logo" src="../assets/logo.png" alt="logo la-ola" />
+  <h1>C'est parti !</h1>
+  <h3>Créer un compte</h3>
+  <div class="row">
+    <button class="nudeButton" @click="setRegistrationScheme('club')">
+      Club
+    </button>
+    <button class="nudeButton" @click="setRegistrationScheme('individual')">
+      Particulier
+    </button>
+  </div>
+
+  <!--------------------------- formulaire Club ------------------------------>
+
+  <form
+    id="club"
+    v-if="registrationScheme === 'club'"
+    @submit.prevent="CreateClubAcount()"
+  >
+    <input
+      type="text"
+      id="nameClub"
+      placeholder="Nom du club"
+      v-model="nomDuClub"
+    />
+    <input
+      type="text"
+      id="namerepresentant"
+      placeholder="Nom du représentant"
+      v-model="nomDuRepresentant"
+    />
+    <input
+      type="email"
+      id="emailClub"
+      placeholder="Email"
+      v-model="emailClub"
+    />
+    <input
+      type="password"
+      id="passwordClub"
+      placeholder="Mot de passe"
+      v-model="motDePasseClub"
+    />
+    <input
+      type="password"
+      id="confirmePassClub"
+      placeholder="Confirmation du mot de passe"
+      v-model="confirmePassClub"
+    />
+    <div id="button">
+      <button id="connexion">Connexion</button>
     </div>
+  </form>
 
-    <!--------------------------- formulaire Club ------------------------------>
+  <!---------------------------- formulaire particulier --------------------->
 
-    <form
-      id="club"
-      v-if="registrationScheme === 'club'"
-      @submit.prevent="CreateClubAcount()"
-    >
-      <input
-        type="text"
-        id="nameClub"
-        placeholder="Nom du club"
-        v-model="nomDuClub"
-      />
-      <input
-        type="text"
-        id="namerepresentant"
-        placeholder="Nom du représentant"
-        v-model="nomDuRepresentant"
-      />
-      <input
-        type="email"
-        id="emailClub"
-        placeholder="Email"
-        v-model="emailClub"
-      />
-      <input
-        type="password"
-        id="passwordClub"
-        placeholder="Mot de passe"
-        v-model="motDePasseClub"
-      />
-      <input
-        type="password"
-        id="confirmePassClub"
-        placeholder="Confirmation du mot de passe"
-        v-model="confirmePassClub"
-      />
-      <div id="button">
-        <button id="connexion">Connexion</button>
-      </div>
-    </form>
-
-    <!---------------------------- formulaire particulier --------------------->
-
-    <form
-      id="particulier"
-      v-if="registrationScheme === 'individual'"
-      @submit.prevent="CreateParticulierAcount()"
-    >
-      <input
-        type="text"
-        id="nomParticulier"
-        placeholder="Nom"
-        v-model="nomParticulier"
-      />
-      <input
-        type="email"
-        id="emailParticulier"
-        placeholder="Email"
-        v-model="emailParticulier"
-      />
-      <input
-        type="password"
-        id="passParticulier"
-        placeholder="Mot de passe"
-        v-model="passParticulier"
-      />
-      <input
-        type="password"
-        id="confirmePassParticulier"
-        placeholder="Confirmation du mot de passe"
-        v-model="confirmePassParticulier"
-      />
-      <input
-        type="text"
-        id="codeParrainage"
-        placeholder="Code de parrainage"
-        v-model="codeParrainage"
-      />
-      <div id="button">
-        <button id="connexion">Connexion</button>
-      </div>
-    </form>
-    <div>
-      <a href="/">Retour à l'accueil</a>
+  <form
+    id="particulier"
+    v-if="registrationScheme === 'individual'"
+    @submit.prevent="CreateParticulierAcount()"
+  >
+    <input
+      type="text"
+      id="nomParticulier"
+      placeholder="Nom"
+      v-model="nomParticulier"
+    />
+    <input
+      type="email"
+      id="emailParticulier"
+      placeholder="Email"
+      v-model="emailParticulier"
+    />
+    <input
+      type="password"
+      id="passParticulier"
+      placeholder="Mot de passe"
+      v-model="passParticulier"
+    />
+    <input
+      type="password"
+      id="confirmePassParticulier"
+      placeholder="Confirmation du mot de passe"
+      v-model="confirmePassParticulier"
+    />
+    <input
+      type="text"
+      id="codeParrainage"
+      placeholder="Code de parrainage"
+      v-model="codeParrainage"
+    />
+    <div id="button">
+      <button id="connexion">Connexion</button>
     </div>
+  </form>
+  <div>
+    <a href="/">Retour à l'accueil</a>
   </div>
 </template>
 

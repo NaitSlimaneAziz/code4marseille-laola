@@ -1,7 +1,8 @@
 <template>
   <div id="block">
-    <a href="./Profile.vue">icone</a>
-    <p>Ma Cagnotte "Don"</p>
+    <img class="logo" src="../assets/logo.png" alt="logo la-ola" />
+    <h1>Ma Cagnotte "Don"</h1>
+
     <p>Je choisis de reverser :</p>
 
     <!----------------------------- Formulaire de Don -------------------------->
@@ -18,12 +19,12 @@
         v-model="nomDuClub"
       />
       <p>
-        Ou trouvez un club pres de chez toi avec notre
-        <a href="http://monclubpresdechezmoi.com/">partenaire</a>
+        Choisis ton club via notre
+        <a href="http://monclubpresdechezmoi.com/">partenaire</a>.
       </p>
 
-      <input type="checkbox" v-model="donAnonyme" />
-      <p>Don Anonyme</p>
+      <input class="box" type="checkbox" v-model="donAnonyme" name="don" />
+      <label for="don">Don Anonyme</label>
 
       <button>Faire un Don</button>
     </form>
@@ -65,3 +66,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.box {
+  height: 15px;
+  width: 50px;
+}
+</style>
