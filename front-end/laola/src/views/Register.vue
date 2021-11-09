@@ -156,7 +156,10 @@ export default {
           codeParrainage: this.codeParrainage,
         };
         console.log("create ok");
-        const response = await axios.post("", body);
+        const response = await axios.post(
+          "https://localhost:8000/user/new",
+          body
+        );
         if (response.data.success) {
           const redirect_url = "/";
           this.$router.push(redirect_url);

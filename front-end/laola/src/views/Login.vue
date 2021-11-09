@@ -3,7 +3,13 @@
   <h1>Bienvenue sur la Ola</h1>
   <h3>Connectez-vous</h3>
   <form id="">
-    <input type="email" id="email" placeholder="Email" required />
+    <input
+      type="email"
+      id="email"
+      placeholder="Email"
+      v-model="emailLogin"
+      required
+    />
     <input type="password" id="password" placeholder="Password" required />
     <div id="">
       <button id="">Connectez-vous</button>
@@ -24,5 +30,11 @@
 export default {
   name: "Login",
   components: {},
+  data() {
+    return {
+      emailLogin: "",
+      inputPassword: "",
+    };
+  },
 };
 </script>
