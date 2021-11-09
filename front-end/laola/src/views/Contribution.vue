@@ -2,7 +2,9 @@
   <p>Ma contribution pour la planète</p>
   <p>Bravo !!</p>
   <p>Vous venez de contribuer à enlever</p>
-  <p>20g de Carbone</p>
+  <form>
+    <input type="number" placeholder="20€" />
+  </form>
   <img src="../assets/bouteille.png" alt="Bouteille" />
 
   <p>
