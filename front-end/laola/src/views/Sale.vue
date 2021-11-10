@@ -15,6 +15,9 @@
       <button>Ajouter</button>
     </form>
   </div>
+  <div>
+    <a href="/">Retour à l'accueil</a>
+  </div>
 </template>
 <script>
 import Category from "../components/Category.vue";
@@ -33,9 +36,10 @@ export default {
 <style>
 #block {
   width: 40vw;
-  margin-left: 360px;
+  margin-left: 460px;
   margin-right: 360px;
 }
+
 #myInput:focus {
   outline: 3px solid #ddd;
 }

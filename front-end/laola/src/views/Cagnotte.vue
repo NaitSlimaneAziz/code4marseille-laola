@@ -8,14 +8,13 @@
     <!----------------------------- Formulaire de Don -------------------------->
 
     <form @submit.prevent="EnvoiDon()">
-      <input type="number" placeholder="15€" id="" v-model="prixDon" />
+      <input type="number" placeholder="15€" v-model="prixDon" />
 
       <p>Au Club :</p>
 
       <input
         type="text"
         placeholder="Olympique de Marseille"
-        id=""
         v-model="nomDuClub"
       />
       <p>

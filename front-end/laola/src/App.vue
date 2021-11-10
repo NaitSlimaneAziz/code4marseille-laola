@@ -62,4 +62,9 @@ button {
 .logo {
   margin-top: 10%;
 }
+#block {
+  width: 40vw;
+  margin-left: 460px;
+  margin-right: 360px;
+}
 </style>

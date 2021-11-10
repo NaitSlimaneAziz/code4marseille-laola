@@ -11,8 +11,8 @@
           <p>Vente</p>
         </div>
         <div>
-          <a href="/login"><i class="fas fa-user"></i></a>
-          <p>Mon compte</p>
+          <a href="/compte"><i class="fas fa-user"></i></a>
+          <p>Mon compte / Se connecter</p>
         </div>
         <div>
           <a href="/panier"><i class="fas fa-shopping-basket"></i></a>
